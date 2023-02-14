@@ -9,10 +9,14 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.21",
     "tailwindcss": "^3.2.4",
     "vite": "^4.0.0"
   },
   "dependencies": {
+    "@material-ui/styles": "^4.11.5",
+    "bootstrap": "^5.3.0-alpha1",
     "navigo": "^8.11.1"
   }
 }
