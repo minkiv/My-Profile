@@ -3,7 +3,7 @@ import header from "../components/header";
 
 const ContactPage = () => {
   return `
-    ${header()}
+    ${header(``)}
     <h1>Contact Page</h1>
     ${footer()}`;
 };

@@ -5,8 +5,8 @@ import footer from "@/components/footer";
 
 const ProjectsPage = () => {
   return `
-    ${header()}
-    <h1>Projects Page</h1>
+    ${header(`<h1>My Projects</h1>`)}
+    
     ${ProjectsList({ projects })}${footer()}`;
 };
 export default ProjectsPage;

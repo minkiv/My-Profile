@@ -1,8 +1,8 @@
 const menus = [
   { id: 1, name: "Trang chủ", link: "/" },
-  { id: 2, name: "About Page", link: "/about" },
-  { id: 3, name: "Projects Page", link: "/projects" },
-  { id: 4, name: "Contact Page", link: "/contact" },
+  { id: 2, name: "About Me", link: "/about" },
+  { id: 3, name: "My Projects", link: "/projects" },
+  { id: 4, name: "Contact", link: "/contact" },
   { id: 5, name: "Admin", link: "/admin/projects" },
 ];
 
