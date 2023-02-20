@@ -1,12 +1,20 @@
 import header from "../components/header";
-import ProjectsList from "../components/ProjectsList";
-import { projects } from "../data";
 import footer from "@/components/footer";
+import { useEffect, useState } from "@/lib";
+import ProjectsList from "@/components/ProjectsList";
 
 const ProjectsPage = () => {
-  return `
-    ${header(`<h1>My Projects</h1>`)}
-    
-    ${ProjectsList({ projects })}${footer()}`;
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:3000/projects")
+      .then((response) => response.json())
+      .then((data) => setData(data));
+  }, []);
+  return ` ${header(`<h1>My Projects</h1>`)}
+  <p>Take A Look At</p>
+  <h1>MY WORK</h1>
+   ${ProjectsList()}
+   
+    ${footer()}`;
 };
 export default ProjectsPage;

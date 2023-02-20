@@ -1,59 +1,76 @@
-// import { projects } from "@/data";
+import { menus } from "@/data";
+
+import style from "./projects.module.css";
 import { useEffect, useState } from "@/lib";
+import Category from "@/components/Category";
+import Projects from "@/components/projects";
 const ProjectsPage = () => {
-  const [data, setData] = useState([]);
+  const [projects, setProjects] = useState([]);
+  const [categories, setCategories] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:3000/categories")
+      .then((response) => response.json())
+      .then((data) => setCategories(data));
+  }, []);
+  const onHandleClick = (id) => {
+    fetch(`http://localhost:3000/categories/${id}?_embed=projects`)
+      .then((response) => response.json())
+      .then((data) => setProjects(data.projects));
+  };
   useEffect(() => {
     fetch("http://localhost:3000/projects")
       .then((response) => response.json())
-      .then((data) => setData(data));
+      .then((data) => setProjects(data));
   }, []);
-  useEffect(() => {
-    const btns = document.querySelectorAll(".btn-remove");
-    for (let btn of btns) {
-      btn.addEventListener("click", function () {
-        const id = this.dataset.id;
-        // Xóa local
-        const newProjects = data.filter((project) => project.id != id);
-        setData(newProjects);
-        // Xóa server
-        fetch(`http://localhost:3000/projects/${id}`, {
-          method: "DELETE",
-        }).then(() => alert("Xóa thành công!"));
-      });
-    }
-  });
+  // useEffect(() => {
+  //   const btns = document.querySelectorAll(".btn-remove");
+  //   for (let btn of btns) {
+  //     btn.addEventListener("click", function () {
+  //       const id = this.dataset.id;
+  //       // Xóa local
+  //       const newProjects = data.filter((project) => project.id != id);
+  //       setProjects(newProjects);
+  //       // Xóa server
+  //       fetch(`http://localhost:3000/projects/${id}`, {
+  //         method: "DELETE",
+  //       }).then(() => alert("Xóa thành công!"));
+  //     });
+  //   }
+  // });
 
-  return `
-  <h1 class="text-blue-700">Quản Lý dự án</h1> 
-  <button class ="btn btn-primary"><a class="text-blue-700" href = "/admin/projects/add">Thêm</a></button>
+  return `<div class = "${style.admin_h}">
+  <nav id = "navba" class = "backdrop-blur-lg z-10 px-8 shadow-md ${
+    style.nav
+  }" >
+  ${menus
+    .map(
+      (menu) =>
+        `<div class = "${style.nava}"><a  href="${menu.link}">${menu.name}</a></div>`
+    )
+    .join("")}
+</nav></div>
+  <div class = "${style.projects}">
+  <h1 class="text-blue-700 ${style.inline}">Quản Lý dự án</h1> 
+  <a href ="/admin/contacts"><button class = "${
+    style.adminContacts
+  }"><h3>Quản Lý Liên hệ</h3></button></a> <br>
+  <a class="text-blue-700" href = "/admin/projects/add"><button class ="btn btn-primary">Thêm</button></a>
+  ${Category({ categories, onClick: onHandleClick })}
   <table class="table table-bordered ">
-  <thead>
+  <thead class="thead-dark">
     <tr>
       <th>ID</th>
       <th>Name</th>
+      <th>Author</th>
+      <th>Image</th>
       <th>Action</th>
     </tr>
   </thead>
   <tbody>
-  ${data
-    .map(
-      (project, index) => `
-        <tr>
-            <td>${index + 1}</td>
-            <td>${project.name}</td>
-            <td>
-                <button data-id = "${
-                  project.id
-                }" class = "btn btn-remove btn-danger">Remove</button>
-                <a href = "/admin/projects/${project.id}/edit">Sửa</a>
-            </td>
-        </tr>
-  `
-    )
-    .join("")}
-    
+  ${Projects({ projects })}
   </tbody>
-</table>`;
+</table>
+</div>`;
 };
 
 export default ProjectsPage;

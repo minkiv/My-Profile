@@ -10,6 +10,7 @@ import ProjectsPage from "./src/pages/projects";
 import adminProjectsPage from "./src/pages/admin/projects";
 import adminProjectAddPage from "./src/pages/admin/projects-add";
 import adminProjectEditPage from "./src/pages/admin/projects-edit";
+import AdminContact from "@/pages/admin/contacts";
 // alt + shift + o
 const app = document.querySelector("#app");
 
@@ -28,7 +29,7 @@ router.on("/admin/projects/add", () => render(adminProjectAddPage, app));
 router.on("/admin/projects/:id/edit", ({ data }) =>
   render(() => adminProjectEditPage(data), app)
 );
-
+router.on("/admin/contacts", () => render(AdminContact, app));
 router.notFound(() => console.log("not found page"));
 
 router.resolve();

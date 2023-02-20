@@ -1,7 +1,15 @@
 import footer from "@/components/footer";
 import header from "../components/header";
+import { useEffect, useState } from "@/lib";
+import ProjectsList from "@/components/ProjectsList";
 
 const HomePage = () => {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:3000/projects")
+      .then((response) => response.json())
+      .then((data) => setData(data));
+  }, []);
   return `
     ${header(`<img src="./src/images/profilePicture.jpg" class = "" width = "100"alt="">
     <h1>Nguyễn thị Hiệp </h1>
@@ -18,6 +26,9 @@ const HomePage = () => {
     I love programming, as well as running, taking photos and learning new things! <br>
     Feel free to get in touch or take a look at my past work below.</p>
     </div>
+    <h1 class = "my-projects">MY PROJECTS</h1>
+    ${ProjectsList()}
+    <div class = "ex-more"><a  href = "/projects">Explore More ></a></div>
     ${footer()}
   `;
 };

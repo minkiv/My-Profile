@@ -1,9 +1,49 @@
 {
   "projects": [
     {
-      "name": "Dự án 1",
-      "author": "Hiepntph28717",
+      "name": "Minkiv Shop ",
+      "categoryID": "1",
+      "author": "hiepnt",
+      "img": "./src/images/danmau.png",
       "id": 2
+    },
+    {
+      "name": "Fourcans milk tea",
+      "id": 3,
+      "author": "Hiepnt",
+      "categoryID": 1,
+      "img": "./src/images/dan2.png"
+    },
+    {
+      "name": "Dự án mẫu",
+      "categoryID": "2",
+      "author": "Hiepnt",
+      "img": "./src/images/pic1.png",
+      "id": 4
+    }
+  ],
+  "categories": [
+    {
+      "name": "Shop",
+      "id": 1
+    },
+    {
+      "name": "Infomation",
+      "id": 2
+    }
+  ],
+  "contacts": [
+    {
+      "email": "hiepntph28717@edu.fpt.vn",
+      "phone": "0934369867",
+      "address": "Sóc Sơn",
+      "id": 2
+    },
+    {
+      "email": "nguyenthihiep2003@gmail.com",
+      "phone": "0934369867",
+      "address": "Sóc Sơn",
+      "id": 3
     }
   ]
 }

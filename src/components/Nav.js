@@ -1,5 +1,6 @@
 import { menus } from "@/data";
 import { useEffect } from "@/lib";
+// import style from "./nav.module.css";
 
 const Nav = () => {
   useEffect(() => {
@@ -18,7 +19,7 @@ const Nav = () => {
       }
     }
   });
-  return `<nav id = "navba" class = "backdrop-blur-lg z-10 px-8 shadow-md" >
+  return `<nav id = "navba" class = "backdrop-blur-lg z-10 px-8 shadow-md " >
   ${menus.map((menu) => `<a  href="${menu.link}">${menu.name}</a>`).join("")}
 </nav>`;
 };

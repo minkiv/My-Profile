@@ -1,0 +1,51 @@
+.projects {
+  width: 1220px;
+  margin: 80px auto;
+}
+.editform {
+  width: 1220px;
+  margin: auto;
+}
+.editform input {
+  width: 50%;
+  margin: 20px 0;
+}
+.nav {
+  height: 48px;
+  padding: 10px 10px 0 30px;
+  /* background-color: transparent; */
+  width: 780px;
+  margin: 5px auto;
+  border-radius: 50px;
+}
+.nav a {
+  padding-right: 45px;
+  text-decoration: none;
+  color: #090a0a;
+}
+.nava {
+  display: inline;
+  padding: 10px 0 12px 32px;
+  margin: 5px 2px 0;
+  border-radius: 50px;
+}
+.nava:hover {
+  background-color: #f8f8f9;
+}
+.admin_h {
+  width: 100%;
+  /* background-color: #0dad98; */
+  padding-top: 0.5px;
+}
+.adminContacts {
+  height: 50px;
+  width: 240px;
+  color: #f8f8f9;
+  background-color: rgb(216, 216, 117);
+  border-radius: 8px;
+  float: right;
+}
+.inline {
+  display: inline-block;
+  padding-bottom: 20px;
+}

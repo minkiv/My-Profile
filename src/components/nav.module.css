@@ -1,0 +1,19 @@
+.nav {
+  height: 50px;
+  padding: 10px 10px 0 30px;
+  /* background-color: transparent; */
+  width: 680px;
+  margin: 0px 480px;
+  border: 2px solid #18254a;
+  border-radius: 50px;
+}
+.sticky {
+  position: fixed;
+  top: 2px;
+  /* background-color: hsla(89, 43%, 51%, 0.3); */
+  border: none;
+}
+.nav a {
+  padding-right: 45px;
+  color: #0dad98;
+}
