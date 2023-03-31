@@ -1,20 +1,30 @@
 .projects {
   width: 1220px;
+  color: #090a0a;
   margin: 80px auto;
 }
 .editform {
   width: 1220px;
   margin: auto;
+  color: #090a0a;
+  padding-top: 40px;
+}
+.form_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.form_grid button {
+  width: 80px;
 }
 .editform input {
-  width: 50%;
+  width: 80%;
   margin: 20px 0;
 }
 .nav {
   height: 48px;
   padding: 10px 10px 0 30px;
   /* background-color: transparent; */
-  width: 780px;
+  width: 800px;
   margin: 5px auto;
   border-radius: 50px;
 }
@@ -25,7 +35,7 @@
 }
 .nava {
   display: inline;
-  padding: 10px 0 12px 32px;
+  padding: 9px 0 10px 32px;
   margin: 5px 2px 0;
   border-radius: 50px;
 }
@@ -37,15 +47,33 @@
   /* background-color: #0dad98; */
   padding-top: 0.5px;
 }
-.adminContacts {
-  height: 50px;
-  width: 240px;
-  color: #f8f8f9;
-  background-color: rgb(216, 216, 117);
-  border-radius: 8px;
-  float: right;
-}
 .inline {
-  display: inline-block;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+.btn {
+  height: 40px;
+  margin: auto;
+}
+.error input {
+  border-color: #ff3860;
+}
+.error {
+  color: #ff3860;
+  font-size: 12px;
+  height: 13px;
+  margin-bottom: 20px;
+}
+.infor input {
+  width: 80%;
+  height: 38px;
+  border-radius: 5px;
+  padding-left: 20px;
+  margin: 20px 0;
+}
+.infor textarea {
+  margin: 20px 0;
+  height: 140px;
+}
+.edName {
+  color: #ff3860;
 }

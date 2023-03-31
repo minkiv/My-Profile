@@ -6,6 +6,7 @@
 }
 .containe {
   color: white;
+  font-family: "Baloo 2", cursive;
 }
 canvas {
   position: absolute;
@@ -258,27 +259,6 @@ button:hover a {
 .ex-more:hover {
   text-decoration-line: underline;
 }
-/* contact */
-.contact {
-  color: #18254a;
-  width: 1220px;
-  margin: auto;
-}
-.contact h1 {
-  padding: 40px 0;
-}
-.stranger {
-  margin-top: 30px;
-}
-.contact form {
-  margin: 80px 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 0.2fr;
-  column-gap: 5px;
-}
-form input {
-  margin: 20px 0;
-}
-form button {
-  margin-top: 68px;
+.required {
+  color: red;
 }

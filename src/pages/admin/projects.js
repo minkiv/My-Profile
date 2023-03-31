@@ -1,4 +1,4 @@
-import { menus } from "@/data";
+import { Adminmenus } from "@/data";
 
 import style from "./projects.module.css";
 import { useEffect, useState } from "@/lib";
@@ -16,6 +16,7 @@ const ProjectsPage = () => {
     fetch(`http://localhost:3000/categories/${id}?_embed=projects`)
       .then((response) => response.json())
       .then((data) => setProjects(data.projects));
+    console.log(id);
   };
   useEffect(() => {
     fetch("http://localhost:3000/projects")
@@ -42,19 +43,16 @@ const ProjectsPage = () => {
   <nav id = "navba" class = "backdrop-blur-lg z-10 px-8 shadow-md ${
     style.nav
   }" >
-  ${menus
-    .map(
-      (menu) =>
-        `<div class = "${style.nava}"><a  href="${menu.link}">${menu.name}</a></div>`
-    )
-    .join("")}
+  ${Adminmenus.map(
+    (menu) =>
+      `<div class = "${style.nava}"><a  href="${menu.link}">${menu.name}</a></div>`
+  ).join("")}
 </nav></div>
   <div class = "${style.projects}">
   <h1 class="text-blue-700 ${style.inline}">Quản Lý dự án</h1> 
-  <a href ="/admin/contacts"><button class = "${
-    style.adminContacts
-  }"><h3>Quản Lý Liên hệ</h3></button></a> <br>
-  <a class="text-blue-700" href = "/admin/projects/add"><button class ="btn btn-primary">Thêm</button></a>
+  <a href = "/admin/projects/add"><button class = "btn btn-primary ${
+    style.inline
+  }">Add</button></a>
   ${Category({ categories, onClick: onHandleClick })}
   <table class="table table-bordered ">
   <thead class="thead-dark">
@@ -63,6 +61,8 @@ const ProjectsPage = () => {
       <th>Name</th>
       <th>Author</th>
       <th>Image</th>
+      <th>Description</th>
+      <th>Link</th>
       <th>Action</th>
     </tr>
   </thead>

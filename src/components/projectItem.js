@@ -11,7 +11,7 @@ const projectItem = () => {
     .map(
       (project) => `
 <li>
-<a href="https://github.com/minkiv" class="card-gg">
+<a href="${project.link}" class="card-gg">
 <img src="${project.img}" class="card__image" alt="" />
 <div class="card__overlay">
   <div class="card__header">
@@ -22,7 +22,7 @@ const projectItem = () => {
       <span class="card__status">${project.author}</span>
     </div>          
   </div>
-  <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+  <p class="card__description">${project.des}</p>
 </div>
 </a>
 </li>    

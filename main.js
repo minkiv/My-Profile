@@ -11,6 +11,10 @@ import adminProjectsPage from "./src/pages/admin/projects";
 import adminProjectAddPage from "./src/pages/admin/projects-add";
 import adminProjectEditPage from "./src/pages/admin/projects-edit";
 import AdminContact from "@/pages/admin/contacts";
+import hiep from "@/pages/admin/hiep";
+import CategoriesPage from "@/pages/admin/categories";
+import CategoryAdd from "@/pages/admin/category-add";
+import CategoryEdit from "@/pages/admin/category-edit";
 // alt + shift + o
 const app = document.querySelector("#app");
 
@@ -29,7 +33,13 @@ router.on("/admin/projects/add", () => render(adminProjectAddPage, app));
 router.on("/admin/projects/:id/edit", ({ data }) =>
   render(() => adminProjectEditPage(data), app)
 );
+router.on("/admin/categories", () => render(CategoriesPage, app));
+router.on("/admin/categories/add", () => render(CategoryAdd, app));
+router.on("/admin/categories/:id/edit", ({ data }) =>
+  render(() => CategoryEdit(data), app)
+);
 router.on("/admin/contacts", () => render(AdminContact, app));
+router.on("/admin/information", () => render(hiep, app));
 router.notFound(() => console.log("not found page"));
 
 router.resolve();

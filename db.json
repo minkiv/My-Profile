@@ -5,21 +5,27 @@
       "categoryID": "1",
       "author": "hiepnt",
       "img": "./src/images/danmau.png",
+      "des": "Dự án 1",
+      "link": "https://github.com/minkiv/DUAN1_NHOM5",
       "id": 2
     },
     {
       "name": "Fourcans milk tea",
-      "id": 3,
+      "categoryID": "1",
       "author": "Hiepnt",
-      "categoryID": 1,
-      "img": "./src/images/dan2.png"
+      "img": "./src/images/dan2.png",
+      "des": "Cửa hàng có sản phẩm nước uống được pha chế theo công thức riêng biệt mong muốn giới thiệu tới khách hàng",
+      "id": 3,
+      "link": "http://localhost/DUAN1_NHOM5/"
     },
     {
-      "name": "Dự án mẫu",
+      "name": "Dự án 3",
       "categoryID": "2",
       "author": "Hiepnt",
-      "img": "./src/images/pic1.png",
-      "id": 4
+      "img": "./src/images/dan1.png",
+      "des": "Dự án 3",
+      "id": 4,
+      "link": "./src/images/duan3.png"
     }
   ],
   "categories": [
@@ -44,6 +50,69 @@
       "phone": "0934369867",
       "address": "Sóc Sơn",
       "id": 3
+    },
+    {
+      "name": "hiệp",
+      "email": "hiepntph28717@fpt.edu.vn",
+      "phone": "0934369867",
+      "address": "Sóc Sơn",
+      "message": "dssss\n",
+      "id": 4
+    }
+  ],
+  "Hiep": [
+    {
+      "currentJob": "Student of FPT Polytechnic",
+      "currentJobDesc": "Hiện tại, em đang là sinh viên năm 2 tại trường FPT Polytechnic. Em bắt đầu học lập trình từ tháng 10 năm 2021 vì cảm thấy yêu thích công việc này. Em có đi làm thêm ở một số nơi nhưng ngoài những giờ học trên trường thì em giành nhiều thời gian ở nhà để ôn lại kiến thức và tìm hiểu những kiến thức mới.Mục tiêu hiện tại của em là trở thành một front-end developer.",
+      "email": "nguyenthihiep2003@gmail.com",
+      "phoneNumber": "0989328421",
+      "Address": "Sóc Sơn - Hà Nội",
+      "futureJob": "Web Developer",
+      "cvImage": "./src/images/pic3.jpg"
+    }
+  ],
+  "Educations": [
+    {
+      "name": "Trường FPT Polytechnic",
+      "time": "10/2021 - 1/2024",
+      "gain": [
+        {
+          "Cname": "Web Programming",
+          "Clink": ""
+        }
+      ]
+    },
+    {
+      "name": "Chứng chỉ đạt dược",
+      "time": "2021 - 2023",
+      "gain": [
+        {
+          "Cname": "Google digital garage Certificate",
+          "Clink": "file:///C:/Users/HP/OneDrive/Desktop/certificate/certificate_google%20digital%20garage.pdf"
+        },
+        {
+          "Cname": "Learnig Excel for the web(Microsoft 365)",
+          "Clink": "file:///C:/Users/HP/OneDrive/Desktop/certificate/CertificateOfCompletion_Learning%20Excel%20for%20the%20web%20Office%20365Microsoft%20365%20(1).pdf"
+        },
+        {
+          "Cname": "Digital Networking strategies",
+          "Clink": "file:///C:/Users/HP/OneDrive/Desktop/certificate/CertificateOfCompletion_Digital%20Networking%20Strategies.pdf"
+        }
+      ]
+    },
+    {
+      "name": "Chứng chỉ Tiếng Anh",
+      "time": "2021 - 2023",
+      "gain": [
+        {
+          "Cname": "EF SET Certificate",
+          "Clink": "file:///C:/Users/HP/OneDrive/Desktop/certificate/EF%20SET%20Certificate.pdf"
+        },
+        {
+          "Cname": "English for Health Care Certificate",
+          "Clink": "file:///C:/Users/HP/OneDrive/Desktop/certificate/english-for-healthcare_certificate_of_achievement_2ucy90e.pdf"
+        }
+      ]
     }
   ]
 }

@@ -1,4 +1,5 @@
 import { useState, useEffect, router } from "@/lib";
+import style from "./nav.module.css";
 
 const Projects = ({ projects }) => {
   // { projects: []} // projects.projects
@@ -29,13 +30,17 @@ const Projects = ({ projects }) => {
         <td>${project.name}</td>
         <td>${project.author}</td>
         <td><img width = "400px" src = "${project.img}"></td>
-        <td>
+        <td class = "${style.projectDesc}">${project.des}</td>
+        <td class = "${style.projectLink}"><a href ="${project.link}">${
+              project.name
+            }</a></td>
+        <td class = "${style.projectAction}">
             <button data-id = "${
               project.id
             }" class = "btn btn-remove btn-danger">Remove</button>
             <a href = "/admin/projects/${
               project.id
-            }/edit"><button class="btn btn-primary">Sửa</button></a>
+            }/edit"><button class="btn btn-primary">Edit</button></a>
         </td>
     </tr>`
           )
